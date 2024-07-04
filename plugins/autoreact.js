@@ -1,4 +1,6 @@
 //Remove (/*  */) to use this plugin
+import fs from `fs`,
+import adm from `./lib`,
 
 let handler = async (m, { conn, text }) => {
 
@@ -27,4 +29,18 @@ m.react = async (text) => {
       key: m.key
     }
   })
-}*/
+}
+import amd from './lib';
+
+amd(
+  {
+    pattern: "hii", // The Command Name
+    alias: "hello" // Command Secondary Trigger
+    fromMe: true, // is the message from the owner
+    desc: "Send Hi Message", // Command Description
+    type: "Test", // Command Category
+  },
+  async (message) => {
+    await message.send("Hello There");
+  }
+);
